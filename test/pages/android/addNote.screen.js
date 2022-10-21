@@ -8,31 +8,38 @@ class AddNoteScreen {
         return $('//*[@text="Add note"]');
     }
 
-    get textOption(){
+    get textOption() {
         return $('//*[@text="Text"]');
     }
 
-
-    get noteTitle(){
+    get noteTitle() {
         return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_title"]');
     }
 
-    get noteBody(){
+    get noteBody() {
         return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_note"]');
     }
 
-    get editBtn(){
+    get editBtn() {
         return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_btn"]');
     }
 
-    get viewNote(){
+    get viewNote() {
         return $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/view_note"]');
     }
 
-    async saveNote(){
+    get leftSideMenuBtn() {
+        return $("//*[contains(@resource-id, 'icon_nav')]");
+    }
+
+    async openLeftSideMenu() {
+        await this.leftSideMenuBtn.click();
+    }
+
+    async saveNote() {
         await driver.back();
         await driver.back();
     }
 }
 
-module.exports = new AddNoteScreen();
+export default new AddNoteScreen();

@@ -1,26 +1,22 @@
 class ListScreen {
 
- get createListBtn() {
-     return $('//XCUIElementTypeButton[@name="Create list"]');
+    get createListBtn() {
+        return $('//XCUIElementTypeButton[@name="Create list"]');
 
- }
+    }
 
- get listNameInput(){
-     return $('//XCUIElementTypeTextField[@value="List Name"]');
- }
+    get listNameInput() {
+        return $('//XCUIElementTypeTextField[@value="List Name"]');
+    }
 
+    get createBtn() {
+        return $('//XCUIElementTypeButton[@name="Create"]');
+    }
 
- get createBtn(){
-     return $('//XCUIElementTypeButton[@name="Create"]');
- }
-
-
- listNameField(name){
-     return $(`~${name}`);
- }
-
+    listNameField(name) {
+        return $(`~${name}`);
+    }
 
 }
 
 export default new ListScreen();
-// module.exports  = new ListScreen();

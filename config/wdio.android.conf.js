@@ -20,7 +20,7 @@ config.port = 4723;
 // will be called from there.
 //
 config.specs = [
-    './test/specs/android/*.spec.js'
+    './test/specs/android/*leftSide*.spec.js'
 ];
 
 config.capabilities = [
@@ -41,6 +41,9 @@ config.capabilities = [
 config.services = [
     ['appium',
         {
+            args: {
+                relaxedSecurity: true
+            },
             logPath: "./"
         }
 

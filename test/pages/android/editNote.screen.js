@@ -1,13 +1,12 @@
-const AddNoteScreen = require("./addNote.screen");
+import AddNoteScreen from "./addNote.screen";
 
-class EditNoteScreen{
+class EditNoteScreen {
 
-    async skipTutorial(){
+    async skipTutorial() {
         await AddNoteScreen.skipBtn.click();
     }
 
-
-    async addAndSaveNote(title, note){
+    async addAndSaveNote(title, note) {
         await AddNoteScreen.adddNoteText.click();
         await AddNoteScreen.textOption.click();
 
@@ -23,4 +22,4 @@ class EditNoteScreen{
 
 }
 
-module.exports = new EditNoteScreen();
+export default new EditNoteScreen();
